@@ -20,10 +20,12 @@ int  main(int argc, char *argv[])
     // ft_printf("Hello\n", "test");
 
 	i = printf("afg%d\n", 5);
-	printf("return printf: %d\n", i);
+	printf("return printf: |%d|\n", i);
 
-	ft_i = ft_printf("afg%d\n", 5);
-	printf("return ft_printf: %d\n", ft_i);
+	printf("\n***********************************\n");
+
+	ft_i = ft_printf("afg%d\n", "5");
+	printf("return ft_printf: |%d|\n", ft_i);
    
 }
 
