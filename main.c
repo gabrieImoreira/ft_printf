@@ -29,12 +29,12 @@ int  main(int argc, char *argv[])
 	// printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);
 	//printf ("Width trick: |%*d| and |%4d| \n", 4, 100, 100);
 
-	printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
-	//printf("afg %-c tese\n", 'g');
+	i = printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
+	printf("return printf: |%d|\n", i);
 	printf("\n***********************************\n");
 
-	ft_printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
-	ft_i = ft_printf("afg |%-*c| tese\n", 5, 'g');
+	ft_i = ft_printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
+	ft_printf("afg |%-*c| tese\n", 5, 'g');
 	printf("return ft_printf: |%d|\n", ft_i);
    
 }
