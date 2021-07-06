@@ -28,11 +28,13 @@ int  main(int argc, char *argv[])
 	// printf ("Some different radices: %d %x %o %#x %#o \n", 100, 100, 100, 100,100);
 	// printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);
 	//printf ("Width trick: |%*d| and |%4d| \n", 4, 100, 100);
-	// printf ("%s \n", "A string");
 
+	//printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
+	printf("afg %-c tese\n", 'g');
 	printf("\n***********************************\n");
 
-	ft_i = ft_printf("afg %c\n", 'a');
+	//ft_printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
+	ft_i = ft_printf("afg |%*c| tese\n", 5, 'g');
 	printf("return ft_printf: |%d|\n", ft_i);
    
 }

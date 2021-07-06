@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treat_char.c                                    :+:      :+:    :+:   */
+/*   ft_treat_flags.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 22:52:23 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/06 17:17:21 by gantonio         ###   ########.fr       */
+/*   Created: 2021/07/06 17:03:07 by gantonio          #+#    #+#             */
+/*   Updated: 2021/07/06 17:13:07 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "ft_printf.h"
 
-int	ft_treat_char(char c, t_flags flags)
+t_flags ft_star_flag(va_list args, t_flags flags)
 {
-	int counter;
-
-	counter = 0;
-	if (flags.minus == 1)
-		ft_putchar(c);
-	counter = ft_treat_star(flags.width, 1, 0);
-	if (flags.minus == 0)
-		ft_putchar(c);
-	return (counter++);
+	flags.star = 1;
+	flags.width = va_arg(args, int);
+	if (flags.width < 0)
+	{
+		flags.minus = 1;
+		flags.width *= -1;
+		flags.zero = 0;
+	}
+	return (flags);
 }
