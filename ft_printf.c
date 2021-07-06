@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 16:00:54 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/06 17:48:06 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/06 17:53:14 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ static int ft_treat_args(int i, va_list args, char *str, t_flags *flags)
 		if(str[i] == '*')
 			*flags = ft_star_flag(args, *flags);
 		if(str[i] == '.');
-		if(str[i] == '-');
+		if(str[i] == '-')
+			*flags = ft_minus_flag(args, *flags);
 		if(ft_istype(str[i]))
 		{
 			flags->type = str[i];
