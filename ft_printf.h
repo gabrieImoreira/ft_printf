@@ -15,5 +15,9 @@ typedef struct	s_flags
 }				t_flags;
 
 int	ft_printf(const char *str, ...);
+int	ft_istype(int c);
+int	ft_treat_width(int width, int minus, int zero);
+int	ft_treat_char(char c, t_flags flags);
+int	ft_treatment_type(int c, t_flags flags, va_list args);
 
 #endif

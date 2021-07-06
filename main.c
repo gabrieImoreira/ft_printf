@@ -19,12 +19,21 @@ int  main(int argc, char *argv[])
     // printf("\nft_printf:\n");
     // ft_printf("Hello\n", "test");
 
-	i = printf("afg%d\n", 5);
-	printf("return printf: |%d|\n", i);
+	// i = printf("afg%d\n", 5);
+	// printf("return printf: |%d|\n", i);
+	// printf ("Characters: %c %c \n", 'a', 65);
+	// printf ("Decimals: %d %ld\n", 1977, 650000L);
+	// printf ("Preceding with blanks: %10d \n", 1977);
+	// printf ("Preceding with zeros: |%4d| \n", 1977);
+	// printf ("Some different radices: %d %x %o %#x %#o \n", 100, 100, 100, 100,100);
+	// printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);
+	 printf ("Width trick: |%*d| and |%4d| \n", 4, 100, 100);
+	// printf ("%s \n", "A string");
+
 
 	printf("\n***********************************\n");
 
-	ft_i = ft_printf("afg%d\n", "5");
+	ft_i = ft_printf("afg %c\n", 'a');
 	printf("return ft_printf: |%d|\n", ft_i);
    
 }
