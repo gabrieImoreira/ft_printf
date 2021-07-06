@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 16:00:54 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/05 23:37:40 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/06 00:09:15 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,7 @@ static int ft_treat_input(va_list args, char *str)
 			char_count += ft_putchar(str[i]);
 		else if(str[i] == '%' && str[i + 1])
 		{
-			i = ft_treat_args(i, args, str, &flags);
-			//ft_putchar(str[i]);
+			i = ft_treat_args(++i, args, str, &flags);
 			if (ft_istype(str[i]))
 				char_count += ft_treatment_type((char)flags.type, flags, args);
 			else if (str[i])
