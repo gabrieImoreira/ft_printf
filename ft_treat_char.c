@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 22:52:23 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/06 18:17:49 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/06 18:26:24 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_treat_char(char c, t_flags flags)
 {
-	int counter;
+	int	counter;
 
 	counter = 1;
 	if (flags.minus == 1)

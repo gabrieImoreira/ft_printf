@@ -31,12 +31,16 @@ int  main(int argc, char *argv[])
 
 	i = printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
 	printf("return printf: |%d|\n", i);
+
+	printf ("chr: |%*c|\n",5, 'a');
 	printf("\n***********************************\n");
 
 	ft_i = ft_printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
 	ft_printf("afg |%-*c| tese\n", 5, 'g');
 	printf("return ft_printf: |%d|\n", ft_i);
-   
+
+
+	ft_printf("test with str: %s\n", "UHUL");
 }
 
 // int  printf_new(char *pszFormatString, ...)

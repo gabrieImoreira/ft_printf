@@ -1,10 +1,10 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <stdarg.h>
+# include <stdarg.h>
 # include "./libft/libft.h"
 
-typedef struct	s_flags
+typedef struct s_flags
 {
 	int		star;
 	int		width;
@@ -14,12 +14,14 @@ typedef struct	s_flags
 	int		dot;
 }				t_flags;
 
-int	ft_printf(const char *str, ...);
-int	ft_istype(int c);
-int	ft_treat_star(int width, int minus, int zero);
-int	ft_treat_char(char c, t_flags flags);
-int	ft_treatment_type(int c, t_flags flags, va_list args);
-t_flags ft_star_flag(va_list args, t_flags flags);
+int		ft_printf(const char *str, ...);
+int		ft_putstr(char *str, int precision);
+int		ft_istype(int c);
+int		ft_treat_star(int width, int minus, int zero);
+int		ft_treat_string(char *str, t_flags flags);
+int		ft_treat_char(char c, t_flags flags);
+int		ft_treatment_type(int c, t_flags flags, va_list args);
+t_flags	ft_star_flag(va_list args, t_flags flags);
 t_flags	ft_minus_flag(va_list args, t_flags flags);
 
 #endif

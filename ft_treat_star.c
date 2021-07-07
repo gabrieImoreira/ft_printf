@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 23:17:39 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/06 18:01:16 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/06 18:30:34 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_treat_star(int width, int minus, int zero)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
 	while (width > minus)
