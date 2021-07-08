@@ -29,18 +29,19 @@ int  main(int argc, char *argv[])
 	// printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);
 	//printf ("Width trick: |%*d| and |%4d| \n", 4, 100, 100);
 
-	i = printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
-	printf("return printf: |%d|\n", i);
+	// i = printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
+	// printf("return printf: |%d|\n", i);
+	// i = ft_printf("test with str: %s\n", "UHUL");
+	// printf("return printf: |%d|\n", i);
 
-	printf ("chr: |%*c|\n",5, 'a');
+	printf("|%.*s|", 2, "vissd");
 	printf("\n***********************************\n");
+	printf("|%.*s|\n", 2,"vissd");
 
-	ft_i = ft_printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
-	ft_printf("afg |%-*c| tese\n", 5, 'g');
-	printf("return ft_printf: |%d|\n", ft_i);
-
-
-	ft_printf("test with str: %s\n", "UHUL");
+	// ft_i = ft_printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
+	// printf("return ft_printf: |%d|\n", ft_i);
+	// ft_i = ft_printf("test with str: %s\n", "UHUL");
+	// printf("return ft_printf: |%d|\n", ft_i);
 }
 
 // int  printf_new(char *pszFormatString, ...)
