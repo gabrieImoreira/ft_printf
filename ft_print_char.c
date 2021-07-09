@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treat_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 22:52:23 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/08 21:21:31 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/09 17:57:52 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_treat_char(char c, t_flags flags)
+int	ft_print_char(char c, t_flags flags)
 {
 	int	counter;
 

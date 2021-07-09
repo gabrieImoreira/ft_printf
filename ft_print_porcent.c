@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treatment_type.c                                :+:      :+:    :+:   */
+/*   ft_print_porcent.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 20:09:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/09 17:58:43 by gantonio         ###   ########.fr       */
+/*   Created: 2021/07/09 17:59:14 by gantonio          #+#    #+#             */
+/*   Updated: 2021/07/09 18:04:06 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_istype(int c)
+int	ft_print_porcent(t_flags flags)
 {
-	return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd') || (c == 'i')
-		|| (c == 'u') || (c == 'x') || (c == 'X') || (c == '%'));
-}
+	int counter;
 
-int	ft_treatment_type(int c, t_flags flags, va_list args)
-{
-	int	i;
-
-	i = 0;
-	if (c == 'c')
-		i = ft_print_char(va_arg(args, int), flags);
-	if (c == 's')
-		i = ft_print_string(va_arg(args, char *), flags);
-	if (c == '%')
-		i = ft_print_porcent(flags);
-	return (i);
+	counter = 0;
+	if (flags.minus == 1)
+		counter += ft_putstr("%", 1);
+	counter += ft_treat_width(flags.width, 1, flags.zero);
+	if (flags.minus == 0)
+		counter += ft_putstr("%", 1);
+	return (counter);
 }

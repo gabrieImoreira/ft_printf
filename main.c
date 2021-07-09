@@ -34,21 +34,52 @@ int main(int argc, char *argv[])
 	// i = ft_printf("test with str: %s\n", "UHUL");
 	// printf("return printf: |%d|\n", i);
 
-	printf("|%*.*s|\n",9, 10, "vissd");
-	printf("|%*.*s|\n",-9, 100, "vissd");
-	printf("|%*s|\n",-9, "vissd");
-	printf("|%.*s|\n", 0, "vissd");
-	printf("|%9.*s|\n",0, "vissd");
-	printf("|%-9.*s|\n",0, "vissd");
-	printf("|%-.1s|\n", "vissd");
-	printf("\n***********************************\n");
-	ft_printf("|%*.*s|\n",9, 10, "vissd"); 
-	ft_printf("|%*.*s|\n",-9, 100, "vissd");
-	ft_printf("|%*s|\n",-9, "vissd");
-	ft_printf("|%.*s|\n",0, "vissd");
-	ft_printf("|%9.*s|\n",0, "vissd");
-	ft_printf("|%-9.*s|\n",0, "vissd");
-	ft_printf("|%-.1s|\n", "vissd");
+	// i = printf("|%*.*s|\n",9, 10, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = printf("|%*.*s|\n",-9, 100, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = printf("|%*s|\n",-9, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = printf("|%.*s|\n", 0, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = printf("|%9.*s|\n",0, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = printf("|%-9.*s|\n",0, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = printf("|%-.1s|\n", "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// printf("\n***********************************\n");
+
+	// i = ft_printf("|%*.*s|\n",9, 10, "vissd"); 
+	// printf("return printf: |%d|\n", i);
+
+	// i = ft_printf("|%*.*s|\n",-9, 100, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = ft_printf("|%*s|\n",-9, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = ft_printf("|%.*s|\n",0, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = ft_printf("|%9.*s|\n",0, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = ft_printf("|%-9.*s|\n",0, "vissd");
+	// printf("return printf: |%d|\n", i);
+
+	// i = ft_printf("|%-.1s|\n", "vissd");
+	// printf("return printf: |%d|\n", i);
+
+
+	printf("test %%-: %s\n", "this is a string");
 
 	return 0;
 
