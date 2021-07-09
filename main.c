@@ -4,7 +4,7 @@
 // int printf_new(char *pszFormatString, ...);
 // int printf_manual(char *pszFormatString, ...);
 
-int  main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 	int ft_i;
@@ -34,9 +34,21 @@ int  main(int argc, char *argv[])
 	// i = ft_printf("test with str: %s\n", "UHUL");
 	// printf("return printf: |%d|\n", i);
 
-	printf("|%.*s|", 2, "vissd");
+	printf("|%*.*s|\n",9, 10, "vissd");
+	printf("ERRO: |%*.*s|\n",-9, 10, "vissd");
+	printf("ERRO: |%*s|\n",-9, "vissd");
+	printf("|%.*s|\n", 0, "vissd");
+	printf("|%9.*s|\n",0, "vissd");
+	printf("|%-9.*s|\n",0, "vissd");
 	printf("\n***********************************\n");
-	printf("|%.*s|\n", 2,"vissd");
+	ft_printf("|%*.*s|\n",9, 10, "vissd"); 
+	ft_printf("ERRO: |%*.*s|\n",-9, 10, "vissd");
+	ft_printf("ERRO: |%*s|\n",-9, "vissd");
+	ft_printf("|%.*s|\n",0, "vissd");
+	ft_printf("|%9.*s|\n",0, "vissd");
+	ft_printf("|%-9.*s|\n",0, "vissd");
+
+	return 0;
 
 	// ft_i = ft_printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
 	// printf("return ft_printf: |%d|\n", ft_i);
