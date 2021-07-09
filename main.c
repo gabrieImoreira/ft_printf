@@ -35,18 +35,20 @@ int main(int argc, char *argv[])
 	// printf("return printf: |%d|\n", i);
 
 	printf("|%*.*s|\n",9, 10, "vissd");
-	printf("ERRO: |%*.*s|\n",-9, 10, "vissd");
-	printf("ERRO: |%*s|\n",-9, "vissd");
+	printf("|%*.*s|\n",-9, 100, "vissd");
+	printf("|%*s|\n",-9, "vissd");
 	printf("|%.*s|\n", 0, "vissd");
 	printf("|%9.*s|\n",0, "vissd");
 	printf("|%-9.*s|\n",0, "vissd");
+	printf("|%-.1s|\n", "vissd");
 	printf("\n***********************************\n");
 	ft_printf("|%*.*s|\n",9, 10, "vissd"); 
-	ft_printf("ERRO: |%*.*s|\n",-9, 10, "vissd");
-	ft_printf("ERRO: |%*s|\n",-9, "vissd");
+	ft_printf("|%*.*s|\n",-9, 100, "vissd");
+	ft_printf("|%*s|\n",-9, "vissd");
 	ft_printf("|%.*s|\n",0, "vissd");
 	ft_printf("|%9.*s|\n",0, "vissd");
 	ft_printf("|%-9.*s|\n",0, "vissd");
+	ft_printf("|%-.1s|\n", "vissd");
 
 	return 0;
 

@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 21:49:12 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/06 21:49:33 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/09 17:21:43 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putstr(char *str, int precision)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] && i < precision)
