@@ -21,7 +21,7 @@ int		ft_print_width(int width, int minus, int zero);
 int		ft_print_string(char *str, t_flags flags);
 int		ft_dot_flag(char *str, int i, t_flags *flags, va_list args);
 int		ft_print_char(char c, t_flags flags);
-int		ft_print_porcent(t_flags flags);
+int		ft_print_integer(int i, t_flags flags);
 int		ft_treatment_type(int c, t_flags flags, va_list args);
 t_flags	ft_digit_flag(char c, t_flags flags);
 t_flags	ft_star_flag(va_list args, t_flags flags);
