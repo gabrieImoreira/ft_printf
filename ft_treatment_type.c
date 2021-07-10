@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 20:09:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/09 17:58:43 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/10 16:51:13 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int	ft_treatment_type(int c, t_flags flags, va_list args)
 	if (c == 's')
 		i = ft_print_string(va_arg(args, char *), flags);
 	if (c == '%')
-		i = ft_print_porcent(flags);
+		i = ft_print_char('%',flags);
 	return (i);
 }

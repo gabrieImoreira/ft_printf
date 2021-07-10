@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 16:00:54 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/08 23:09:30 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/10 16:47:00 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ static t_flags	ft_init_flags(void)
 static int	ft_treat_args(int i, va_list args, char *str, t_flags *flags)
 {
 	while (str[i])
-	{	
+	{
+		if (str[i] == '0' && flags->width == 0 && flags->minus == 0)
+			flags->zero = 1;
 		if (str[i] == '*')
 			*flags = ft_star_flag(args, *flags);
 		if (str[i] == '.')

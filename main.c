@@ -79,7 +79,8 @@ int main(int argc, char *argv[])
 	// printf("return printf: |%d|\n", i);
 
 
-	printf("test %%-: %s\n", "this is a string");
+	ft_printf("test |%-5%|: %s\n", "this is a string");
+	//printf("test %-% %s\n", "this is a string");
 
 	return 0;
 
