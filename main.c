@@ -78,8 +78,8 @@ int main(int argc, char *argv[])
 	// i = ft_printf("|%-.1s|\n", "vissd");
 	// printf("return printf: |%d|\n", i);
 
-
 	ft_printf("test |%-5%|: %s\n", "this is a string");
+	ft_printf("test int: %d\n", 99000);
 	//printf("test %-% %s\n", "this is a string");
 
 	return 0;

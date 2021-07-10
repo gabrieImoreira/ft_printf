@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 20:09:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/10 16:51:13 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/10 18:10:13 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@ int	ft_istype(int c)
 
 int	ft_treatment_type(int c, t_flags flags, va_list args)
 {
-	int	i;
+	int	counter;
 
-	i = 0;
+	counter = 0;
 	if (c == 'c')
-		i = ft_print_char(va_arg(args, int), flags);
+		counter = ft_print_char(va_arg(args, int), flags);
 	if (c == 's')
-		i = ft_print_string(va_arg(args, char *), flags);
+		counter = ft_print_string(va_arg(args, char *), flags);
 	if (c == '%')
-		i = ft_print_char('%',flags);
-	return (i);
+		counter = ft_print_char('%', flags);
+	if ((c == 'i') || (c == 'd'))
+		counter = ft_print_integer(va_arg(args, int), flags);
+	return (counter);
 }
