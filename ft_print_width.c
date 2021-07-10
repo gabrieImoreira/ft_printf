@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treat_star.c                                    :+:      :+:    :+:   */
+/*   ft_print_width.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 23:17:39 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/08 21:21:15 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/10 16:58:06 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_treat_width(int width, int minus, int zero)
+int	ft_print_width(int width, int minus, int zero)
 {
 	int	counter;
 

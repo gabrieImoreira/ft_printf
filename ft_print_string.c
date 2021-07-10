@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 21:04:46 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/09 17:57:47 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/10 16:57:44 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	ft_print_string(char *str, t_flags flags)
 	else if (flags.minus == 1)
 		counter += ft_putstr(str, ft_strlen(str));
 	if (flags.dot >= 0)
-		counter += ft_treat_width(flags.width, flags.dot, 0);
+		counter += ft_print_width(flags.width, flags.dot, 0);
 	else
-		counter += ft_treat_width(flags.width, ft_strlen(str), 0);
+		counter += ft_print_width(flags.width, ft_strlen(str), 0);
 	if (flags.minus == 0)
 	{
 		if (flags.dot >= 0)
