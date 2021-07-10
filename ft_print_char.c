@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 22:52:23 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/09 17:57:52 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/10 16:56:41 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_print_char(char c, t_flags flags)
 	counter = 1;
 	if (flags.minus == 1)
 		ft_putchar(c);
-	counter += ft_treat_width(flags.width, 1, 0);
+	counter += ft_print_width(flags.width, 1, 0);
 	if (flags.minus == 0)
 		ft_putchar(c);
 	return (counter);
