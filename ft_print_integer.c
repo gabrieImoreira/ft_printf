@@ -6,12 +6,11 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 18:10:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/12 00:34:06 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/12 01:01:37 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 static int	ft_putzero(char *str, t_flags flags)
 {
@@ -45,12 +44,12 @@ int	ft_print_integer(int integer, t_flags flags)
 	if (flags.zero == 1)
 		f_zero = 1;
 	if (flags.minus == 1)
-		ft_putstr(str, ft_strlen(str));
+		counter += ft_putstr(str, ft_strlen(str));
 	if (flags.dot > 0)
 		counter += ft_print_width((flags.width - ft_strlen(str) + 1), 1, 0);
 	else
 		counter += ft_print_width(flags.width - ft_strlen(str) + 1, 1, f_zero);
 	if (flags.minus == 0)
-		ft_putstr(str, ft_strlen(str));
+		counter += ft_putstr(str, ft_strlen(str));
 	return (counter);
 }
