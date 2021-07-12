@@ -84,24 +84,55 @@ int main(int argc, char *argv[])
 
 	//ft_printf("test int: |%-010d|\n", 99000);
 	ft_printf("\n--printf--\n");
-	printf("test int: |%10d|\n", 99000);
-	printf("test int: |%010d|\n", 99000);
-	printf("test int: |%3d|\n", 99);
-	printf("test int: |%-10d|\n", 99000);
-	printf("test int: |%*d|\n", -10, 99000);
-	printf("test int: |%6.3d|\n", 99000);
-	printf("test int: |%10.8d|\n", 99000);
-	printf("test int: |%-10.8d|\n", 99000);
+	i = printf("test int: |%10d|\n", 99000);
+	printf("return printf: |%d|\n", i);
 
+	i = printf("test int: |%010d|\n", 99000);
+	printf("return printf: |%d|\n", i);
+	
+	i = printf("test int: |%3d|\n", 99);
+	printf("return printf: |%d|\n", i);
+	
+	i = printf("test int: |%-10d|\n", 99000);
+	printf("return printf: |%d|\n", i);
+	
+	i = printf("test int: |%*d|\n", -10, 99000);
+	printf("return printf: |%d|\n", i);
+	
+	i = printf("test int: |%6.3d|\n", 99000);
+	printf("return printf: |%d|\n", i);
+	
+	i = printf("test int: |%10.8d|\n", 99000);
+	printf("return printf: |%d|\n", i);
+	
+	i = printf("test int: |%-10.8d|\n", 99000);
+	printf("return printf: |%d|\n", i);
+	
 	ft_printf("\n--ft_printf--\n");
-	ft_printf("test int: |%10d|\n", 99000);
-	ft_printf("test int: |%010d|\n", 99000);
-	ft_printf("test int: |%3d|\n", 99);
-	ft_printf("test int: |%-10d|\n", 99000);
-	ft_printf("test int: |%*d|\n", -10, 99000);
-	ft_printf("test int: |%6.3d|\n", 99000);
-	ft_printf("test int: |%10.8d|\n", 99000);
-	ft_printf("test int: |%-10.8d|\n", 99000);
+
+	i = ft_printf("test int: |%10d|\n", 99000);
+	printf("return printf: |%d|\n", i);
+	
+	// i = ft_printf("test int: |%010d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
+	
+	// i = ft_printf("test int: |%3d|\n", 99);
+	// printf("return printf: |%d|\n", i);
+	
+	// i = ft_printf("test int: |%-10d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
+	
+	// i = ft_printf("test int: |%*d|\n", -10, 99000);
+	// printf("return printf: |%d|\n", i);
+	
+	// i = ft_printf("test int: |%6.3d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
+	
+	// i = ft_printf("test int: |%10.8d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
+	
+	// i = ft_printf("test int: |%-10.8d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
 
 	//printf("test %-% %s\n", "this is a string");
 
