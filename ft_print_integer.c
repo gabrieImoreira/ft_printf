@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 18:10:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/12 21:15:56 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/12 21:29:09 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,5 @@ int	ft_print_integer(int integer, t_flags flags)
 		counter += ft_print_width(flags.width - ft_strlen(str) + 1, 1, f_zero);
 	if (flags.minus == 0)
 		counter += ft_putstr(str, ft_strlen(str));
-	//printf("counter %d\n\n", counter);
 	return (counter);
 }
