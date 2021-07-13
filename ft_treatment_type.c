@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 20:09:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/10 18:10:13 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/12 20:41:12 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ int	ft_treatment_type(int c, t_flags flags, va_list args)
 		counter = ft_print_char('%', flags);
 	if ((c == 'i') || (c == 'd'))
 		counter = ft_print_integer(va_arg(args, int), flags);
+	if (c == 'u')
+		//counter = ft_print_unsigned_integer(va_arg(args, int), flags);
 	return (counter);
 }
