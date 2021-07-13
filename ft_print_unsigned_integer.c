@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_integer.c                                 :+:      :+:    :+:   */
+/*   ft_print_unsigned_integer.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/10 18:10:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/12 21:33:26 by gantonio         ###   ########.fr       */
+/*   Created: 2021/07/12 21:50:26 by gantonio          #+#    #+#             */
+/*   Updated: 2021/07/12 23:03:04 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,13 @@ static int	ft_putzero(char *str, t_flags flags)
 	ft_bzero(str, ft_strlen(str));
 	while (++i <= (int)(flags.dot - (flags.width - ft_strlen(str_dot) + 1)))
 		str[i] = '0';
-	if (str_dot[0] == '-')
-	{	
-		str[0] = '-';
-		ft_memmove(str + i, str_dot + 1, ft_strlen(str_dot) + 1);
-	}
-	else
-		ft_memmove(str + i, str_dot, ft_strlen(str_dot) + 1);
+	ft_memmove(str + i, str_dot, ft_strlen(str_dot) + 1);
 	counter = ft_strlen(str);
 	free(str_dot);
 	return (0);
 }
 
-int	ft_print_integer(int integer, t_flags flags)
+int	ft_print_unsigned_integer(unsigned int integer, t_flags flags)
 {
 	int		counter;
 	int		f_zero;
@@ -48,7 +42,7 @@ int	ft_print_integer(int integer, t_flags flags)
 
 	f_zero = 0;
 	counter = 0;
-	str = ft_itoa(integer);
+	str = ft_unsigned_itoa(integer);
 	if (flags.dot > 0 && flags.dot >= (int)ft_strlen(str))
 		counter += ft_putzero(str, flags);
 	if (flags.zero == 1)

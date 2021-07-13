@@ -105,13 +105,14 @@ int main(int argc, char *argv[])
 	// i = printf("test int: |%10.8d|\n", 99000);
 	// printf("return printf: |%d|\n", i);
 	
-	i = printf("test int: |%10.10d|\n", -99000);
-	printf("return printf: |%d|\n", i);
+	// i = printf("test int: |%10.10d|\n", -99000);
+	// printf("return printf: |%d|\n", i);
 	
-	ft_printf("\n--ft_printf--\n");
+	// ft_printf("\n--ft_printf--\n");
 
-	i = ft_printf("test int: |%10.10d|\n", -99000);
-	printf("return printf: |%d|\n", i);
+	// i = ft_printf("test int: |%10.10d|\n", -99000);
+	// printf("return printf: |%d|\n", i);
+	
 	
 	// i = ft_printf("test int: |%010d|\n", 99000);
 	// printf("return printf: |%d|\n", i);
@@ -139,6 +140,13 @@ int main(int argc, char *argv[])
 	// printf("test int: |%-d|\n", -99000);
 	// ft_printf("test int: |%d|\n", -99000);
 
+	i = printf("test int: |%u|\n", -2147483647);
+	printf("return printf: |%d|\n", i);
+	
+	ft_printf("\n--ft_printf--\n");
+
+	i = ft_printf("test int: |%u|\n", -2147483647);
+	printf("return printf: |%d|\n", i);
 	return 0;
 
 	// ft_i = ft_printf ("chr: |%*c| e |%-*c| e |%-*c|\n", 5,'a', 5, 'a',-5, 'a');
