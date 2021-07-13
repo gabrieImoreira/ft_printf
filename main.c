@@ -84,33 +84,33 @@ int main(int argc, char *argv[])
 
 	//ft_printf("test int: |%-010d|\n", 99000);
 	ft_printf("\n--printf--\n");
-	i = printf("test int: |%10d|\n", 99000);
-	printf("return printf: |%d|\n", i);
+	// i = printf("test int: |%10d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
 
-	i = printf("test int: |%010d|\n", 99000);
-	printf("return printf: |%d|\n", i);
+	// i = printf("test int: |%010d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
 	
-	i = printf("test int: |%3d|\n", 99);
-	printf("return printf: |%d|\n", i);
+	// i = printf("test int: |%3d|\n", 99);
+	// printf("return printf: |%d|\n", i);
 	
-	i = printf("test int: |%-10d|\n", 99000);
-	printf("return printf: |%d|\n", i);
+	// i = printf("test int: |%-10d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
 	
-	i = printf("test int: |%*d|\n", -10, 99000);
-	printf("return printf: |%d|\n", i);
+	// i = printf("test int: |%*d|\n", -10, 99000);
+	// printf("return printf: |%d|\n", i);
 	
-	i = printf("test int: |%6.3d|\n", 99000);
-	printf("return printf: |%d|\n", i);
+	// i = printf("test int: |%6.3d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
 	
-	i = printf("test int: |%10.8d|\n", 99000);
-	printf("return printf: |%d|\n", i);
+	// i = printf("test int: |%10.8d|\n", 99000);
+	// printf("return printf: |%d|\n", i);
 	
-	i = printf("test int: |%-10.8d|\n", 99000);
+	i = printf("test int: |%10.10d|\n", -99000);
 	printf("return printf: |%d|\n", i);
 	
 	ft_printf("\n--ft_printf--\n");
 
-	i = ft_printf("test int: |%10d|\n", 99000);
+	i = ft_printf("test int: |%10.10d|\n", -99000);
 	printf("return printf: |%d|\n", i);
 	
 	// i = ft_printf("test int: |%010d|\n", 99000);
