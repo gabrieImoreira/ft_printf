@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_integer.c                                 :+:      :+:    :+:   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/10 18:10:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/14 19:03:28 by gantonio         ###   ########.fr       */
+/*   Created: 2021/07/14 17:45:13 by gantonio          #+#    #+#             */
+/*   Updated: 2021/07/14 18:50:39 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static	char	*ft_hex_tolower(char *str)
+{
+	int i;
+
+	i = -1;
+	while (str[++i])
+		str[i] = ft_tolower(str[i]);
+	return (str);
+}
 
 static int	ft_putzero(char *str, t_flags flags)
 {
@@ -26,22 +36,15 @@ static int	ft_putzero(char *str, t_flags flags)
 		return (0);
 	ft_memcpy(str_dot, str, ft_strlen(str));
 	ft_bzero(str, ft_strlen(str));
-	
 	while (++i <= (int)(flags.dot - (flags.width - ft_strlen(str_dot) + 1)))
 		str[i] = '0';
-	if (str_dot[0] == '-')
-	{	
-		str[0] = '-';
-		ft_memmove(str + i, str_dot + 1, ft_strlen(str_dot) + 1);
-	}
-	else
-		ft_memmove(str + i, str_dot, ft_strlen(str_dot) + 1);
+	ft_memmove(str + i, str_dot, ft_strlen(str_dot) + 1);
 	counter = ft_strlen(str);
 	free(str_dot);
 	return (0);
 }
 
-int	ft_print_integer(int integer, t_flags flags)
+int	ft_print_hex(unsigned int integer, t_flags flags, int case_type)
 {
 	int		counter;
 	int		f_zero;
@@ -49,7 +52,8 @@ int	ft_print_integer(int integer, t_flags flags)
 
 	f_zero = 0;
 	counter = 0;
-	str = ft_itoa(integer);
+	str = ft_convert_base(integer, 16);
+	str = ft_hex_tolower(str);
 	if (flags.dot > 0 && flags.dot > (int)ft_strlen(str))
 		counter += ft_putzero(str, flags);
 	if (flags.zero == 1)

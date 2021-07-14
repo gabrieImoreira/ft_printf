@@ -140,12 +140,13 @@ int main(int argc, char *argv[])
 	// printf("test int: |%-d|\n", -99000);
 	// ft_printf("test int: |%d|\n", -99000);
 
-	i = printf("test int: |%u|\n", -2147483647);
+	int d = 1596845;
+	i = printf("test int: |%10.18x|\n", d);
 	printf("return printf: |%d|\n", i);
 	
 	ft_printf("\n--ft_printf--\n");
 
-	i = ft_printf("test int: |%u|\n", -2147483647);
+	i = ft_printf("test int: |%10.18x|\n", d);
 	printf("return printf: |%d|\n", i);
 	return 0;
 
