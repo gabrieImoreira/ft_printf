@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 21:50:26 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/14 17:41:49 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/14 19:38:10 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_putzero(char *str, t_flags flags)
 		return (0);
 	ft_memcpy(str_dot, str, ft_strlen(str));
 	ft_bzero(str, ft_strlen(str));
-	while (++i <= (int)(flags.dot - (flags.width - ft_strlen(str_dot) + 1)))
+	while (++i <= (int)(flags.dot - (ft_strlen(str_dot))))
 		str[i] = '0';
 	ft_memmove(str + i, str_dot, ft_strlen(str_dot) + 1);
 	counter = ft_strlen(str);
