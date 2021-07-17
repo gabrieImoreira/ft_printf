@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 20:09:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/14 18:08:43 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/17 02:30:32 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,30 @@
 
 int	ft_istype(int c)
 {
-	return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd') || (c == 'i')
-		|| (c == 'u') || (c == 'x') || (c == 'X') || (c == '%'));
+	char	*flag;
+	flag = "cspdiuxX";
+	if (ft_strchr(flag, c) == NULL)
+		return (0);
+	else
+		return (1);
 }
 
-int	ft_treatment_type(int c, t_flags flags, va_list args)
+int	ft_treatment_type(int c, va_list args, int width)
 {
 	int	counter;
 
 	counter = 0;
 	if (c == 'c')
-		counter = ft_print_char(va_arg(args, int), flags);
+		counter = ft_print_char(va_arg(args, int), width);
 	if (c == 's')
-		counter = ft_print_string(va_arg(args, char *), flags);
+	 	counter = ft_print_string(va_arg(args, char *), width);
 	if (c == '%')
-		counter = ft_print_char('%', flags);
+	 	counter = ft_print_char('%', width);
 	if ((c == 'i') || (c == 'd'))
-		counter = ft_print_integer(va_arg(args, int), flags);
-	if (c == 'u')
-		counter = ft_print_unsigned_integer(va_arg(args, unsigned int), flags);
-	if (c == 'x')
-		counter = ft_print_hex(va_arg(args, unsigned int), flags, 0);
+		counter = ft_print_integer(va_arg(args, int), width);
+	// if (c == 'u')
+	// 	counter = ft_print_unsigned_integer(va_arg(args, unsigned int), width);
+	// if (c == 'x')
+	// 	counter = ft_print_hex(va_arg(args, unsigned int), width, 0);
 	return (counter);
 }
