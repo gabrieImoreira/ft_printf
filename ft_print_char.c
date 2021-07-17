@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 22:52:23 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/17 02:37:50 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/17 19:26:31 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_print_char(char c, int width)
 {
 	int	counter;
-	
+
 	counter = 1;
 	counter += ft_print_width(width, 1);
 	ft_putchar(c);
