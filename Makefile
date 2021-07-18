@@ -4,7 +4,7 @@ NAME =	libftprintf.a
 FLAGS =	-Wall -Wextra -Werror
 CC =	gcc
 
-LIBFT_DIR	=	./libft
+LIBFT_DIR	=	libft
 LIBFT		=	${LIBFT_DIR}/libft.a
 
 SRCS =	ft_convert_base.c ft_print_char.c ft_print_integer.c \
