@@ -6,21 +6,21 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 18:19:52 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/18 16:31:59 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/18 16:50:48 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char	*ft_base(unsigned long long number, int base, int counter, char *str)
+static char	*ft_base(unsigned long long num, int base, int counter, char *str)
 {
-	while (number != 0)
+	while (num != 0)
 	{
-		if ((number % base) < 10)
-			str[counter - 1] = (number % base) + 48;
+		if ((num % base) < 10)
+			str[counter - 1] = (num % base) + 48;
 		else
-			str[counter - 1] = (number % base) + 55;
-		number /= base;
+			str[counter - 1] = (num % base) + 55;
+		num /= base;
 		counter--;
 	}
 	return (str);
