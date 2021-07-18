@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 	// printf("test int: |%10d|\n", 99000);
 
 	//ft_printf("test int: |%-010d|\n", 99000);
-	ft_printf("\n--printf--\n");
+	//ft_printf("\n--printf--\n");
 	// i = printf("test int: |%10d|\n", 99000);
 	// printf("return printf: |%d|\n", i);
 
@@ -140,29 +140,19 @@ int main(int argc, char *argv[])
 	// printf("test int: |%-d|\n", -99000);
 	// ft_printf("test int: |%d|\n", -99000);
 
-	int d = 11596845;
-	i = printf("test int: |%118.3d|\n", d);
-	printf("return printf: |%d|\n", i);
-	i = printf("test int: |%118.7d|\n", d);
-	printf("return printf: |%d|\n", i);
-	i = printf("test int: |%118.8d|\n", d);
-	printf("return printf: |%d|\n", i);
-	i = printf("test int: |%11.24d|\n", d);
-	printf("return printf: |%d|\n", i);
-	i = printf("test int: |%11.30d|\n", d);
-	printf("return printf: |%d|\n", i);
-	
-	ft_printf("--ft_printf--\n");
+	int d = -11596845;
+	char *str = "var";
+	i = printf("test int: |%10s|\n", "gabriel");
 
-	// i = ft_printf("test int: |%118.3d|\n", d);
+	// i = ft_printf("test: |%3c|\n", 'g');
 	// printf("return printf: |%d|\n", i);
-	// i = ft_printf("test int: |%118.7d|\n", d);
+	// i = ft_printf("test: |%10s| %c %%éisso\n,", "gams", 'g');
 	// printf("return printf: |%d|\n", i);
-	// i = ft_printf("test int: |%118.8d|\n", d);
+	// i = ft_printf("test: |%6d|\n", 30000);
 	// printf("return printf: |%d|\n", i);
-	i = ft_printf("test int: |%11.24d|\n", d);
+	i = printf("test: |%p|\n", 0);
 	printf("return printf: |%d|\n", i);
-	i = ft_printf("test int: |%11.30d|\n", d);
+	i = ft_printf("test: |%p|\n", 0);
 	printf("return printf: |%d|\n", i);
 	return 0;
 

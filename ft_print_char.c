@@ -6,21 +6,30 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 22:52:23 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/10 16:56:41 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/17 19:26:31 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(char c, t_flags flags)
+int	ft_print_char(char c, int width)
 {
 	int	counter;
 
 	counter = 1;
-	if (flags.minus == 1)
-		ft_putchar(c);
-	counter += ft_print_width(flags.width, 1, 0);
-	if (flags.minus == 0)
-		ft_putchar(c);
+	counter += ft_print_width(width, 1);
+	ft_putchar(c);
+	return (counter);
+}
+
+int	ft_print_string(char *str, int width)
+{
+	int	counter;
+
+	counter = ft_strlen(str);
+	if (!str)
+		return (write(1, "(null)", 6), 6);
+	counter += ft_print_width(width, counter);
+	ft_putstr_fd(str, 1);
 	return (counter);
 }

@@ -6,13 +6,13 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 18:19:52 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/14 18:26:55 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/18 16:31:59 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char	*ft_base(unsigned int number, int base, int counter, char *str)
+static char	*ft_base(unsigned long long number, int base, int counter, char *str)
 {
 	while (number != 0)
 	{
@@ -26,7 +26,7 @@ static char	*ft_base(unsigned int number, int base, int counter, char *str)
 	return (str);
 }
 
-char	*ft_convert_base(unsigned int number, int base)
+char	*ft_convert_base(unsigned long long number, int base)
 {
 	unsigned long long	temp;
 	int					counter;
@@ -47,5 +47,15 @@ char	*ft_convert_base(unsigned int number, int base)
 		return (0);
 	str[counter] = '\0';
 	str = ft_base(temp, base, counter, str);
+	return (str);
+}
+
+char	*ft_hex_tolower(char *str)
+{
+	int	i;
+
+	i = -1;
+	while (str[++i])
+		str[i] = ft_tolower(str[i]);
 	return (str);
 }
