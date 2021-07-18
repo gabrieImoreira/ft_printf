@@ -1,20 +1,10 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/07/18 17:45:44 by gantonio          #+#    #+#              #
-#    Updated: 2021/07/18 17:59:43 by gantonio         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+
+NAME =	libftprintf.a
 
 FLAGS =	-Wall -Wextra -Werror
-
 CC =	gcc
-NAME =	libftprintf.a
-LIBFT_DIR	=	./libft
+
+LIBFT_DIR	=	libft
 LIBFT		=	${LIBFT_DIR}/libft.a
 
 SRCS =	ft_convert_base.c ft_print_char.c ft_print_integer.c \
