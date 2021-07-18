@@ -141,6 +141,7 @@ int main(int argc, char *argv[])
 	// ft_printf("test int: |%d|\n", -99000);
 
 	int d = -11596845;
+	char *str = "var";
 	i = printf("test int: |%10s|\n", "gabriel");
 
 	// i = ft_printf("test: |%3c|\n", 'g');
@@ -149,9 +150,9 @@ int main(int argc, char *argv[])
 	// printf("return printf: |%d|\n", i);
 	// i = ft_printf("test: |%6d|\n", 30000);
 	// printf("return printf: |%d|\n", i);
-	i = printf("test: |%20x|\n", -10);
+	i = printf("test: |%p|\n", 0);
 	printf("return printf: |%d|\n", i);
-	i = ft_printf("test: |%20x|\n", -10);
+	i = ft_printf("test: |%p|\n", 0);
 	printf("return printf: |%d|\n", i);
 	return 0;
 

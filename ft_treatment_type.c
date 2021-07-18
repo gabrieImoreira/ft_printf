@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 20:09:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/17 19:24:39 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/18 16:01:15 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	ft_treatment_type(int c, va_list args, int width)
 		counter = ft_print_char(va_arg(args, int), width);
 	if (c == 's')
 		counter = ft_print_string(va_arg(args, char *), width);
+	if (c == 'p')
+		counter = ft_print_pointer(va_arg(args, size_t), width);
 	if (c == '%')
 		counter = ft_print_char('%', width);
 	if ((c == 'i') || (c == 'd'))
@@ -40,5 +42,7 @@ int	ft_treatment_type(int c, va_list args, int width)
 		counter = ft_print_unsigned_integer(va_arg(args, unsigned int), width);
 	if (c == 'x')
 		counter = ft_print_hex(va_arg(args, unsigned int), width, 1);
+	if (c == 'X')
+		counter = ft_print_hex(va_arg(args, unsigned int), width, 0);	
 	return (counter);
 }
