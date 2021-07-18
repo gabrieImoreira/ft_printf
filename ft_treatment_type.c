@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 20:09:42 by gantonio          #+#    #+#             */
-/*   Updated: 2021/07/18 16:01:15 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/07/18 16:49:56 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ int	ft_treatment_type(int c, va_list args, int width)
 	if (c == 'x')
 		counter = ft_print_hex(va_arg(args, unsigned int), width, 1);
 	if (c == 'X')
-		counter = ft_print_hex(va_arg(args, unsigned int), width, 0);	
+		counter = ft_print_hex(va_arg(args, unsigned int), width, 0);
 	return (counter);
 }
