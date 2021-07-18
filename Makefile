@@ -6,14 +6,15 @@
 #    By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/18 17:45:44 by gantonio          #+#    #+#              #
-#    Updated: 2021/07/18 17:59:43 by gantonio         ###   ########.fr        #
+#    Updated: 2021/07/18 18:07:24 by gantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS =	-Wall -Wextra -Werror
-
-CC =	gcc
 NAME =	libftprintf.a
+
+FLAGS =	-Wall -Wextra -Werror
+CC =	gcc
+
 LIBFT_DIR	=	./libft
 LIBFT		=	${LIBFT_DIR}/libft.a
 
